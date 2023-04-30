@@ -6,17 +6,13 @@ import Products from "./components/Products";
 import Slider from "./components/Slider";
 import { Home } from "./pages/Home";
 import Footer from "./components/Footer";
+import ProductList from "./pages/ProductList";
 
 const App = () => {
   return (
     <div>
-      <Announcement />
-      <Navbar />
-      <Slider />
-      <Categories />
-      <Products />
-      <Subscription />
-      <Footer />
+      {/* <Home /> */}
+      <ProductList />
     </div>
   );
 };
