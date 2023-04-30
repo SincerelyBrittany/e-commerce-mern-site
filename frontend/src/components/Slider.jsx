@@ -36,6 +36,8 @@ const Wrapper = styled.div`
   transform: translateX(${(props) => props.slideIndex * -100}vw);
 `;
 
+// the transform: translateX - helps to show which slide is showing by using the value of state/
+
 const Slide = styled.div`
   width: 100vw;
   height: 100vh;
@@ -92,7 +94,7 @@ const Slider = () => {
         <ArrowLeftOutlined />
       </Arrow>
       <Wrapper slideIndex={slideIndex}>
-        <Slide>
+        <Slide bg="f5fafd">
           <ImgContainer>
             <Image
               src="https://media.istockphoto.com/id/1145618475/photo/villefranche-on-sea-in-evening.jpg?s=612x612&w=0&k=20&c=vQGj6uK7UUVt0vQhZc9yhRO_oYBEf8IeeDxGyJKbLKI="
@@ -106,7 +108,7 @@ const Slider = () => {
             <Button>See Deals</Button>
           </InfoContainer>
         </Slide>
-        <Slide>
+        <Slide bg="fcf1ed">
           <ImgContainer>
             <Image
               src="https://media.istockphoto.com/id/1145618475/photo/villefranche-on-sea-in-evening.jpg?s=612x612&w=0&k=20&c=vQGj6uK7UUVt0vQhZc9yhRO_oYBEf8IeeDxGyJKbLKI="
@@ -120,7 +122,7 @@ const Slider = () => {
             <Button>See Deals</Button>
           </InfoContainer>
         </Slide>
-        <Slide>
+        <Slide bg="fbf0f4">
           <ImgContainer>
             <Image
               src="https://media.istockphoto.com/id/1145618475/photo/villefranche-on-sea-in-evening.jpg?s=612x612&w=0&k=20&c=vQGj6uK7UUVt0vQhZc9yhRO_oYBEf8IeeDxGyJKbLKI="
