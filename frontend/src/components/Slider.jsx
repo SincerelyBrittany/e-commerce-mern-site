@@ -1,6 +1,8 @@
 import { ArrowLeftOutlined, ArrowRightOutlined } from "@material-ui/icons";
 import { useState } from "react";
 import styled from "styled-components";
+import { sliderItems } from "../data";
+
 
 const Container = styled.div`
   width: 100%;
@@ -8,6 +10,7 @@ const Container = styled.div`
   display: flex;
   position: relative;
   overflow: hidden;
+
 `;
 
 const Arrow = styled.div`
@@ -35,8 +38,6 @@ const Wrapper = styled.div`
   transition: all 1.5s ease;
   transform: translateX(${(props) => props.slideIndex * -100}vw);
 `;
-
-// the transform: translateX - helps to show which slide is showing by using the value of state/
 
 const Slide = styled.div`
   width: 100vw;
@@ -94,48 +95,18 @@ const Slider = () => {
         <ArrowLeftOutlined />
       </Arrow>
       <Wrapper slideIndex={slideIndex}>
-        <Slide bg="f5fafd">
-          <ImgContainer>
-            <Image
-              src="https://media.istockphoto.com/id/1145618475/photo/villefranche-on-sea-in-evening.jpg?s=612x612&w=0&k=20&c=vQGj6uK7UUVt0vQhZc9yhRO_oYBEf8IeeDxGyJKbLKI="
-              alt=""
-              srcset=""
-            />
-          </ImgContainer>
-          <InfoContainer>
-            <Title>GREAT DEALS</Title>
-            <Desc>Make sure to check out our spring deals!</Desc>
-            <Button>See Deals</Button>
-          </InfoContainer>
-        </Slide>
-        <Slide bg="fcf1ed">
-          <ImgContainer>
-            <Image
-              src="https://media.istockphoto.com/id/1145618475/photo/villefranche-on-sea-in-evening.jpg?s=612x612&w=0&k=20&c=vQGj6uK7UUVt0vQhZc9yhRO_oYBEf8IeeDxGyJKbLKI="
-              alt=""
-              srcset=""
-            />
-          </ImgContainer>
-          <InfoContainer>
-            <Title>High Demand</Title>
-            <Desc>Make sure to check out our spring deals!</Desc>
-            <Button>See Deals</Button>
-          </InfoContainer>
-        </Slide>
-        <Slide bg="fbf0f4">
-          <ImgContainer>
-            <Image
-              src="https://media.istockphoto.com/id/1145618475/photo/villefranche-on-sea-in-evening.jpg?s=612x612&w=0&k=20&c=vQGj6uK7UUVt0vQhZc9yhRO_oYBEf8IeeDxGyJKbLKI="
-              alt=""
-              srcset=""
-            />
-          </ImgContainer>
-          <InfoContainer>
-            <Title>WINTER SALE</Title>
-            <Desc>Make sure to check out our spring deals!</Desc>
-            <Button>See Deals</Button>
-          </InfoContainer>
-        </Slide>
+        {sliderItems.map((item) => (
+          <Slide bg={item.bg} key={item.id}>
+            <ImgContainer>
+              <Image src={item.img} />
+            </ImgContainer>
+            <InfoContainer>
+              <Title>{item.title}</Title>
+              <Desc>{item.desc}</Desc>
+              <Button>SHOW NOW</Button>
+            </InfoContainer>
+          </Slide>
+        ))}
       </Wrapper>
       <Arrow direction="right" onClick={() => handleClick("right")}>
         <ArrowRightOutlined />
