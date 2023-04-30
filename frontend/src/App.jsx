@@ -5,6 +5,7 @@ import Subscription from "./components/Subscription";
 import Products from "./components/Products";
 import Slider from "./components/Slider";
 import { Home } from "./pages/Home";
+import Footer from "./components/Footer";
 
 const App = () => {
   return (
@@ -15,6 +16,7 @@ const App = () => {
       <Categories />
       <Products />
       <Subscription />
+      <Footer />
     </div>
   );
 };
