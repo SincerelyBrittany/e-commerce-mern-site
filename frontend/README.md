@@ -1,3 +1,11 @@
+- VS Code Shortcuts
+
+```
+// rfc
+// rafc
+// rcc
+```
+
 ## Font Style: Pick A Font Style
 
 - Go to https://fonts.google.com/
