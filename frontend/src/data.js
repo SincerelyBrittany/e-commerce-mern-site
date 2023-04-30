@@ -21,3 +21,21 @@ export const sliderItems = [
     bg: "fbf0f4",
   },
 ];
+
+export const categories = [
+  {
+    id: 1,
+    img: "https://im.indiatimes.in/content/2022/Jan/flight_61e3d3e3bc87d.jpg?w=820&h=540&cc=1",
+    title: "Flights!",
+  },
+  {
+    id: 2,
+    img: "https://images.unsplash.com/photo-1610641818989-c2051b5e2cfd?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8cmVzb3J0fGVufDB8fDB8fA%3D%3D&w=1000&q=80",
+    title: "Resorts",
+  },
+  {
+    id: 3,
+    img: "https://hips.hearstapps.com/hmg-prod/images/2023-chevrolet-corvette-z06-002-1635950091.jpg",
+    title: "Car Services",
+  },
+];
