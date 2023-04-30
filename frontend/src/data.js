@@ -39,3 +39,38 @@ export const categories = [
     title: "Car Services",
   },
 ];
+
+export const products = [
+  {
+    id: 1,
+    img: "https://picsum.photos/id/20/280/280",
+  },
+  {
+    id: 2,
+    img: "https://picsum.photos/id/30/280/280",
+  },
+  {
+    id: 3,
+    img: "https://picsum.photos/id/40/280/280",
+  },
+  {
+    id: 4,
+    img: "https://picsum.photos/id/50/280/280",
+  },
+  {
+    id: 5,
+    img: "https://picsum.photos/id/60/280/280",
+  },
+  {
+    id: 6,
+    img: "https://picsum.photos/id/70/280/280",
+  },
+  {
+    id: 7,
+    img: "https://picsum.photos/id/100/280/280",
+  },
+  {
+    id: 8,
+    img: "https://picsum.photos/id/200/280/280",
+  },
+];
