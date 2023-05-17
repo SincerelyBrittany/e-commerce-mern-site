@@ -8,6 +8,8 @@ const dotenv = require("dotenv");
 
 dotenv.config();
 
+app.use(express.json()); // allows you to pass json files
+
 const userRoute = require("./routes/user");
 
 mongoose
@@ -21,7 +23,7 @@ app.get("/api/test", () => {
   console.log("test is sucessful");
 });
 
-app.use("/api/user", userRoute); //5000/api/user/usertest
+app.use("/api/users", userRoute); //5000/api/user/usertest
 
 // app.listen(process.env.PORT || 5001, () => {
 

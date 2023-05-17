@@ -5,6 +5,8 @@ A MERN e-commerce site template.
 Frontend: React/Javascript, Styled Components, Material UI, and Redux on the Frontend.
 Backend: Express, MongoDB, Nodemon, Dotenv
 
+sudo mongod --dbpath /System/Volumes/Data/data/db
+
 ## Screenshots
 
 ![App Screenshot](https://via.placeholder.com/468x300?text=App+Screenshot+Here)
