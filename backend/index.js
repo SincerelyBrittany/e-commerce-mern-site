@@ -1,16 +1,18 @@
-const express = require("express");
+// const express = require("express");
+
+import express from "express";
 
 const app = express();
 
-const mongoose = require("mongoose");
+import userRoutes from "./routes/user.js";
+import mongoose from "mongoose";
 
-const dotenv = require("dotenv");
-
+import * as dotenv from "dotenv"; // see https://github.com/motdotla/dotenv#how-do-i-use-dotenv-with-import
 dotenv.config();
 
 app.use(express.json()); // allows you to pass json files
 
-const userRoute = require("./routes/user");
+app.use("/routes/user", userRoutes);
 
 mongoose
   .connect(process.env.MONGO_URL)
@@ -23,7 +25,7 @@ app.get("/api/test", () => {
   console.log("test is sucessful");
 });
 
-app.use("/api/users", userRoute); //5000/api/user/usertest
+// app.use("/api/users", userRoute); //5000/api/user/usertest
 
 // app.listen(process.env.PORT || 5001, () => {
 

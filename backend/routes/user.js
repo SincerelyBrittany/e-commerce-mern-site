@@ -1,6 +1,6 @@
-const router = require("express").Router();
-// import express from "express";
-// const router = express.Router();
+// const router = require("express").Router();
+import express from "express";
+const router = express.Router();
 
 router.get("/usertest", (req, res) => {
   res.send("user test is successful");
@@ -12,4 +12,4 @@ router.post("/userposttest", (req, res) => {
   res.send(username);
 });
 
-module.exports = router;
+export default router;
