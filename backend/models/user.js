@@ -15,7 +15,7 @@ const UserSchema = new mongoose.Schema(
   { timestamps: true }
 );
 
-const UserModel = mongoose.model("Users", UserSchema);
+const UserModel = mongoose.model("User", UserSchema);
 export { UserModel };
 
 // https://stackoverflow.com/questions/34560235/how-to-write-a-mongoose-model-in-es6-es2015
